@@ -7,11 +7,11 @@ const HomePage = () => {
     const productData = useLoaderData();
 
     const {meals} = productData;
-    console.log(meals);
+    //console.log(meals);
     return (
         <div>
-            <h1 className='text-center'>Data:{meals.length}</h1>
-            <div className='grid grid-cols-4 gap-5 lg:px-28'>
+            {/* <h1 className='text-center'>Data:{meals.length}</h1> */}
+            <div className='grid lg:grid-cols-4 gap-5 lg:px-28 mt-16 p-5 '>
                 {
                     meals.map(meal => <HomeMeal
                     key={meal.idMeal}

@@ -3,10 +3,11 @@ import { Card } from 'flowbite-react';
 import React from 'react';
 import './HomeMeal.css'
 import { QuestionMarkCircleIcon, PlayCircleIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 const HomeMeal = ({ meal }) => {
-    console.log(meal)
-    const { strMealThumb, strMeal, strInstructions, strCategory, strSource, strTags, strYoutube } = meal;
+    //console.log(meal)
+    const { strMealThumb, strMeal, strInstructions, strCategory, strSource, strTags, strYoutube, idMeal } = meal;
     return (
         <div>
             <div className=''>
@@ -25,10 +26,10 @@ const HomeMeal = ({ meal }) => {
                             <div className='flex'>
                                 <a className='md:mr-2' target="_blank" href={strSource}><QuestionMarkCircleIcon className="h-6 w-6 text-[#FFCB59]" /></a>
 
-                                <a target="_blank" href={strTags}><PlayCircleIcon className="h-6 w-6 text-red-600" /></a>
+                                <a target="_blank" href={strYoutube}><PlayCircleIcon className="h-6 w-6 text-red-600" /></a>
                             </div>
                             <div>
-                                <button className='text-xs font-bold'>Read More</button>
+                                <Link to={`details/${idMeal}`} className='text-xs font-bold'>Read More</Link>
                             </div>
 
                         </div>
