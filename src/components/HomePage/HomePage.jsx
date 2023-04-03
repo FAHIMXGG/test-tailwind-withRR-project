@@ -11,7 +11,7 @@ const HomePage = () => {
     return (
         <div>
             <h1 className='text-center'>Data:{meals.length}</h1>
-            <div className='grid grid-cols-4'>
+            <div className='grid grid-cols-4 gap-5 lg:px-28'>
                 {
                     meals.map(meal => <HomeMeal
                     key={meal.idMeal}
