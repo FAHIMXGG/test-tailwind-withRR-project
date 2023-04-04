@@ -1,27 +1,11 @@
-
 import { Card } from 'flowbite-react';
 import React from 'react';
-import './HomeMeal.css'
 import { QuestionMarkCircleIcon, PlayCircleIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
-const HomeMeal = ({ meal }) => {
-    //console.log(meal)
+const SearchQ = ({meal}) => {
     const { strMealThumb, strMeal, strInstructions, strCategory, strSource, strTags, strYoutube, idMeal } = meal;
-
-
-
-    // const [message, setMessage] = useState('');
-
-    // const handleChange = event => {
-    //   setMessage(event.target.value);
-
-    //   console.log('value is:', event.target.value);
-    // };
-
     return (
-
-
         <div>
             {/* <div>
                 <input
@@ -53,7 +37,7 @@ const HomeMeal = ({ meal }) => {
                                 <a target="_blank" href={strYoutube}><PlayCircleIcon className="h-6 w-6 text-red-600" /></a>
                             </div>
                             <div>
-                                <Link to={`details/${idMeal}`} className='text-xs font-bold'>Read More</Link>
+                                <Link to={`/details/${idMeal}`} className='text-xs font-bold'>Read More</Link>
                             </div>
 
                         </div>
@@ -64,4 +48,4 @@ const HomeMeal = ({ meal }) => {
     );
 };
 
-export default HomeMeal;
+export default SearchQ;

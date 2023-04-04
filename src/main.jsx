@@ -13,6 +13,7 @@ import About from './components/About/About';
 import HomePage from './components/HomePage/HomePage';
 import Contact from './components/Contact/Contact';
 import MealInfo from './components/MealInfo/MealInfo';
+import Search from './components/Search/Search';
 
 
 
@@ -31,6 +32,13 @@ const router = createBrowserRouter([
         path:'details/:mealId',
         element: <MealInfo></MealInfo>,
         loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.mealId}`)
+        
+      },
+      {
+        path:'/:search',
+        element: <Search></Search>,
+        //loader: ({params}) => console.log(params.search),
+        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.search}`)
         
       },
       {

@@ -1,8 +1,11 @@
 import { Navbar } from 'flowbite-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+    const [message, setMessage] = useState('');
+
     return (
         <div>
             {/* <Link to="/">Home</Link>
@@ -30,6 +33,18 @@ const Header = () => {
                         </Navbar.Collapse>
                     </React.Fragment>
                 </Navbar>
+                <div>
+                <div className='mx-auto text-center mt-0'>
+                <input
+                    onChange={e=> setMessage(e.target.value)}
+                    type="text"
+                    id="message"
+                    name="message"
+                />
+
+                <Link  to={`${message}`} className='text-xs font-bold'>Search</Link>
+            </div>
+                </div>
             </div>
         </div>
 
