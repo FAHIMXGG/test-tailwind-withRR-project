@@ -14,6 +14,7 @@ import HomePage from './components/HomePage/HomePage';
 import Contact from './components/Contact/Contact';
 import MealInfo from './components/MealInfo/MealInfo';
 import Search from './components/Search/Search';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<ErrorPage />,
     children: [
       {
         path: '/',
